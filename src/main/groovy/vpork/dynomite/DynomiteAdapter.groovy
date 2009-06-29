@@ -16,7 +16,7 @@ public class DynomiteAdapter implements HashClient {
 	
 	byte[] get(String key) {
 	    try {
-	        return client.get(key).getResults()
+	        return client.get(key).getResults().get(0).getBytes()
 	    } catch (FailureException e) {
 	        return null
 	    }
