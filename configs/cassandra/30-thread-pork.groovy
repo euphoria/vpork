@@ -2,7 +2,7 @@ storageType="cassandra"
 testName="30-thread-pork"
 
 /**
- * Configuration of the Voldemort ClientStore.
+ * Configuration of the Cassandra ClientStore.
  */
 storeFactory {
     storePort         = 9160
