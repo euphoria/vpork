@@ -50,9 +50,14 @@ Just edit the Vpork nodes.conf file to include the nodes in your cluster.
 $ ./vpork.sh configs/cassandra/30-thread-pork.groovy configs/cassandra/nodes.conf
 
 
+For Dynomite:
+You can use the default JSON config for Dynomite, but the storage backend
+options will impact the results of this test, so tune them at will.
+
+$ ./vpork.sh configs/dynomite/30-thread-pork.groovy configs/dynomite/nodes.conf
+
+
 If everything is working, you should see results in results/30-thread-pork-0
-
-
 
 ** Log files **
 The output of VPork is put into a test-versioned directory with snapshots of your Voldemort configurations:

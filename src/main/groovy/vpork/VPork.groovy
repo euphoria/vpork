@@ -19,6 +19,7 @@ package vpork
 
 import vpork.voldemort.VoldemortClientFactory
 import vpork.cassandra.CassandraClientFactory
+import vpork.dynomite.DynomiteClientFactory
 import vpork.memory.MemoryClientFactory
 
 import java.util.concurrent.atomic.AtomicBoolean
@@ -134,6 +135,8 @@ class VPork {
     private static HashClientFactory loadFactory(String storageType) {
         if(storageType == "cassandra") {
             return new CassandraClientFactory()
+        } else if(storageType == "dynomite") {
+            return new DynomiteClientFactory()
         } else if(storageType == "voldemort") {
             return new VoldemortClientFactory()
         } else if(storageType == "memory") {
